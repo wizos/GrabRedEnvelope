@@ -75,7 +75,11 @@ class WechatService : BaseAccessibilityService() {
      * 部分手机特殊场景下偶现出现红包框但是不走TYPE_WINDOW_STATE_CHANGED的情况，导致不会点击开，手动在点击后调一次避免此问题
      */
     override fun onAccessibilityEvent(event: AccessibilityEvent) {
-        super.onAccessibilityEvent(event)
+        try {
+            super.onAccessibilityEvent(event)
+        }catch (e: Exception){
+        }
+        if (event.className.isNullOrEmpty()) return
         if (AccessibilityEvent.TYPE_VIEW_CLICKED == event.eventType) {
             LogUtils.d("monitorViewClicked:$event")
             if ((status != HAS_CLICKED)) return
