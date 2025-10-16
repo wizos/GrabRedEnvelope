@@ -191,7 +191,7 @@
                     android:id="@+id/et_pointX"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
+                    android:inputType="number"
                     android:maxLength="4"
                     tools:text = "518"
                     android:hint="x"/>
@@ -199,7 +199,7 @@
                     android:id="@+id/et_pointY"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
+                    android:inputType="number"
                     android:maxLength="4"
                     tools:text = "1447"
                     android:hint="y"/>
